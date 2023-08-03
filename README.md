@@ -13,7 +13,7 @@ Technique:
   - **Photoswipe**
   - **React-Router-Dom**
   - **Redux**
-  - **ClassNames (JS utility)**
+  - **ClassNames** (JS utility)
   - **LARAVEL** (will be on the forum)
 
 https://abelhorvathszarka.com
