@@ -1,0 +1,393 @@
+@import 'bootstrap/dist/css/bootstrap.css';
+@import 'bootstrap-icons/font/bootstrap-icons.css';
+
+#root {
+  padding: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+footer {
+  display: flex;
+  position: fixed;
+  height: 30px;
+  bottom: 0;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999999;
+}
+
+/* NAV */
+
+.NavImg:hover {
+  transform: scale(1.3);
+}
+
+.NavImg {
+  width: 30px;
+  margin: 5px;
+  transition: transform .2s;
+}
+
+@media all and (max-width:768px) {
+  .NavImg {
+    width: 6vw;
+  }
+
+  .navbar-nav>div>div>.col:last-child {
+    display: none;
+
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: translatey(0px);
+  }
+
+  50% {
+    transform: translatey(-7px);
+  }
+
+  100% {
+    transform: translatey(0px);
+  }
+}
+
+.port_img {
+  width: 25vw;
+  min-width: 300px;
+  max-width: 600px;
+  background: transparent;
+  animation-name: float;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  transition: all 0.4s ease-in-out;
+}
+
+.text_decor_none {
+  color: white !important;
+  text-decoration: none;
+}
+
+#darkmodeButton {
+  text-align: center;
+  border: 1px solid black;
+  padding: 5px;
+  margin: auto;
+  border-radius: 4px;
+  font-size: medium;
+  background-color: #0275d8;
+  width: 3vw;
+}
+
+#darkmodeButton:hover {
+  cursor: pointer;
+  background-color: #1a7ed5;
+}
+
+#darkmodeButton:active {
+  background-color: #0060b4;
+}
+
+/* MAIN OLDAL ANIMÁCIÓ */
+
+.MainName {
+  font-family: "Montserrat Medium";
+  max-width: 40ch;
+  transform: scale(0.94);
+  animation: scale 1s forwards cubic-bezier(0.5, 1, 0.89, 1);
+}
+
+.MainJob {
+  font-family: "Montserrat Medium";
+  max-width: 30ch;
+  transform: scale(0.94);
+  animation: scale 1s forwards cubic-bezier(0.5, 1, 0.89, 1);
+}
+
+@keyframes scale {
+  100% {
+    transform: scale(1);
+  }
+}
+
+.MainText {
+  display: inline-block;
+  opacity: 0;
+  filter: blur(4px);
+}
+
+.MainText:nth-child(1) {
+  animation: fade-in 0.8s 0.1s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+.MainText:nth-child(2) {
+  animation: fade-in 0.8s 0.3s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+.MainText:nth-child(3) {
+  animation: fade-in 0.8s 0.4s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+.MainText:nth-child(4) {
+  animation: fade-in 0.8s 0.5s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+.MainText:nth-child(5) {
+  animation: fade-in 0.8s 0.6s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+.MainText:nth-child(6) {
+  animation: fade-in 0.8s 0.7s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+.MainText:nth-child(7) {
+  animation: fade-in 0.8s 0.8s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+.MainText:nth-child(8) {
+  animation: fade-in 0.8s 0.9s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+.MainText:nth-child(9) {
+  animation: fade-in 0.8s 1.0s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+.MainText:nth-child(10) {
+  animation: fade-in 0.8s 1.1s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+.MainText:nth-child(11) {
+  animation: fade-in 0.8s 1.2s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+.MainText:nth-child(12) {
+  animation: fade-in 0.8s 1.3s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+@keyframes fade-in {
+  100% {
+    opacity: 1;
+    filter: blur(0);
+  }
+}
+
+/* About Me */
+
+.polygonText {
+  position: relative;
+}
+
+.polygonText h2 {
+  color: #fff;
+  font-size: 8em;
+  position: absolute;
+  transform: translate(-50%, -50%);
+}
+
+.polygonText h2:nth-child(1) {
+  color: transparent;
+  -webkit-text-stroke: 2px #0d6efd;
+}
+
+.polygonText h2:nth-child(2) {
+  color: #0d6efd;
+  animation: animate 4s ease-in-out infinite;
+}
+
+@keyframes animate {
+
+  0%,
+  100% {
+    clip-path: polygon(0% 45%,
+        16% 44%,
+        33% 50%,
+        54% 60%,
+        70% 61%,
+        84% 59%,
+        100% 52%,
+        100% 100%,
+        0% 100%);
+  }
+
+  50% {
+    clip-path: polygon(0% 60%,
+        15% 65%,
+        34% 66%,
+        51% 62%,
+        67% 50%,
+        84% 45%,
+        100% 46%,
+        100% 100%,
+        0% 100%);
+  }
+}
+
+/* CONTACT ME */
+
+.contactOpacity {
+  animation: contactOpacity 1.5s;
+}
+
+@keyframes contactOpacity {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.AboutSkills {
+  width: 25vw;
+  min-width: 100px;
+  max-width: 200px;
+}
+
+/* TOASTERS */
+
+.positionedToaster {
+  position: fixed;
+  bottom: 10%;
+  right: 5%;
+}
+
+/* CALCULATOR */
+
+.inputStyle {
+  width: 100%;
+  margin: auto;
+  border-bottom: 2px solid rgb(205, 205, 205) !important;
+  border-radius: 0;
+  border: 0px;
+  text-align: right;
+  font-size: 3rem;
+}
+
+.buttonsWidth {
+  width: 25%;
+  border: 1px solid rgb(65, 65, 65);
+}
+
+.zeroWidth {
+  width: 50%;
+}
+
+.buttonsWidth:hover {
+  border: 1px solid rgb(65, 65, 65);
+}
+
+.calcBox {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 20rem;
+  padding: 0;
+  box-shadow: 1px 1px 4px 3px rgb(203, 203, 203);
+}
+
+.calcBox .container-fluid {
+  padding: 0;
+}
+
+/* PHOTOSWIPE */
+
+.pswp {
+  z-index: 9999999 !important;
+}
+
+.pswp-gallery {
+  text-align: center;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.gllry_p {
+  border-radius: 5px;
+  object-fit: cover;
+  width: 250px;
+  height: 300px;
+}
+
+.pswp-with-perma-preloader .pswp__icn {
+  opacity: 0.85 !important;
+}
+
+/* TODO APP */
+
+.ToDo {
+  display: flex;
+  justify-content: center;
+}
+
+.ToDo_btn {
+  margin-left: 15px;
+}
+
+ul.no-bullets {
+  list-style-type: none;
+  padding: 0;
+  /* Remove padding */
+  margin: 0;
+  /* Remove margins */
+}
+
+.ToDo_div {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 2px 5px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.ToDo_li {
+  width: 100%;
+  max-width: 450px;
+  overflow: hidden;
+  background-color: #FFC107;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 1px 5px;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+
+.ToDo_li:hover{
+  background-color: #fdd14e
+}
+
+i.bi-x-square {
+  cursor: pointer;
+}
+
+li div:first-child{
+  overflow: hidden;
+}
+
+.dragged{
+  position: fixed;
+  transition: transform 0.23s; 
+  cursor: grab;
+  opacity: 0.6;
+}
+
+.todoListContainer{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  overflow-y: hidden; 
+}
